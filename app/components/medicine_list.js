@@ -1,7 +1,9 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 import MedicineListItem from './medicine_list_item';
+import AddMedicine from './add_medicine';
 
+//test data to be replaced with stuff from server later
 var medicines = [
     {
         name: "Advil",
@@ -20,7 +22,8 @@ export default class MedicineList extends React.Component {
         return (
             <div className="medicine_list">
                 <h1>Medicine List</h1>
-                <button>Add</button>
+                {/* TODO will open bootstrap modal */}
+                <AddMedicine />
                 {medicines.map((medicine) =>
                     <ul key={medicine.id}>
                         <MedicineListItem name={medicine.name} time={medicine.time}/>
