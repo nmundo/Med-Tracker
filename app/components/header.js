@@ -7,8 +7,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                <Header />
-                <Main />
+                <h1>Medicine List</h1>
             </div>
         )
     }
