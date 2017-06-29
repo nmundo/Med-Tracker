@@ -6,4 +6,4 @@ offer an Alexa skill that will allow you to do all of the same things you could
 through the application using only your voice.
 
 ##WIP
-nathanmundo.com/medtracker
+[Link](http://www.nathanmundo.com/medtracker)
