@@ -25,8 +25,7 @@ const app = express();
 //     algorithms: ['RS256']
 // });
 
-app.get('/medicinelist', (req, res) => {
-  let medicines = [
+let medicines = [
     {
         name: "Advil",
         time: "5pm",
@@ -38,7 +37,13 @@ app.get('/medicinelist', (req, res) => {
         id: 1
     }
 ]
+
+app.get('/medicinelist', (req, res) => {
   res.json(medicines);
+})
+
+app.get('/medicinedetails/:id', (req, res) => {
+    res.json(medicines.find(medicine => medicine.id == req.params.id));
 })
 
 app.listen(3333);

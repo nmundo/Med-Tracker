@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Link} from 'react-router-dom';
 
 export default class MedicineListItem extends React.Component {
     render() {
@@ -7,7 +8,7 @@ export default class MedicineListItem extends React.Component {
             <li>
                 {this.props.name},
                 {this.props.time},
-                <button>Details</button> {/* TODO button will open modal with details/option to edit */}
+                <Link to={'/medicinedetails/' + this.props.id}>Details</Link>
             </li>
         );
     }

@@ -5,6 +5,10 @@ import {Link} from 'react-router-dom';
 import MedicineListItem from './medicine_list_item';
 import {getUserMedicines} from '../utils/get_user_data';
 
+// export {medicines};
+
+// let {medicines} = [];
+
 //test data to be replaced with stuff from server later
 // var medicines = [
 //     {
@@ -42,7 +46,7 @@ export default class MedicineList extends React.Component {
                 <Link to='/addMed'> Add medicine </Link>
                 {medicines.map((medicine) =>
                     <ul key={medicine.id}>
-                        <MedicineListItem name={medicine.name} time={medicine.time}/>
+                        <MedicineListItem name={medicine.name} time={medicine.time} id={medicine.id}/>
                     </ul>
                 )}
             </div>

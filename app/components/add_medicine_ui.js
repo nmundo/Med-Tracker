@@ -9,7 +9,7 @@ import TimePicker from 'rc-time-picker';
 const ButtonToNavigate = ({ title, history }) => (
   <button
     type="button"
-    onClick={() => history.push('/')}
+    onClick={() => history.push('/medicinelist')}
   >
     {title}
   </button>
@@ -32,7 +32,7 @@ export default class MedicineListItem extends React.Component {
                         format={'h:mm a'}
                         use12Hours
                     /><br/>
-                    <Route path="/medicinelist" render={(props) => <ButtonToNavigate {...props} title="Done" />} /><Link to='/medicinelist'>Cancel</Link>
+                    <Route path="/medicinelist" render={props => <ButtonToNavigate {...props} title="Done" />} /><Link to='/medicinelist'>Cancel</Link>
                 </form>
             </div>
         );
