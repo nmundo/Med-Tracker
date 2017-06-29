@@ -1,13 +1,11 @@
 import React from 'react';
-
-import Header from './header';
-import Main from './main';
+import {Link} from 'react-router-dom';
 
 export default class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>Medicine List</h1>
+                <Link to='/medicinelist'>Login</Link>
             </div>
         )
     }

@@ -1,5 +1,5 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import {Link} from 'react-router-dom';
 import {Route} from 'react-router-dom';
@@ -32,7 +32,7 @@ export default class MedicineListItem extends React.Component {
                         format={'h:mm a'}
                         use12Hours
                     /><br/>
-                    <Route path="/" render={(props) => <ButtonToNavigate {...props} title="Done" />} /><Link to='/'>Cancel</Link>
+                    <Route path="/medicinelist" render={(props) => <ButtonToNavigate {...props} title="Done" />} /><Link to='/medicinelist'>Cancel</Link>
                 </form>
             </div>
         );
