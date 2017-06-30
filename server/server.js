@@ -2,6 +2,12 @@
 
 const express = require('express');
 const app = express();
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
+
 // const jwt = require('express-jwt');
 // const jwks = require('jwks-rsa');
 // const cors = require('cors');
@@ -25,7 +31,7 @@ const app = express();
 //     algorithms: ['RS256']
 // });
 
-let medicines = [
+let medicinesArray = [
     {
         name: "Advil",
         time: "5pm",
@@ -39,12 +45,23 @@ let medicines = [
 ]
 
 app.get('/medicinelist', (req, res) => {
-  res.json(medicines);
+  res.json(medicinesArray);
 })
 
 app.get('/medicinedetails/:id', (req, res) => {
-    res.json(medicines.find(medicine => medicine.id == req.params.id));
+    res.json(medicinesArray.find(medicine => medicine.id == req.params.id));
 })
+
+app.post('/addnewmedicine', function(req, res) {
+    console.log(req.body);
+    var name = req.body.name.name;
+    var time = req.body.time.time;
+    var id = medicinesArray.length;
+
+    medicinesArray.push({name, time, id});
+
+    //res.send(name + ' ' + time + ' ' + id);
+});
 
 app.listen(3333);
 console.log('Listening on localhost:3333');

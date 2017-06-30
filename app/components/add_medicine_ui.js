@@ -20,7 +20,7 @@ const ButtonToNavigate = ({ title, history }) => (
 export default class MedicineListItem extends React.Component {
     saveNewMedicine(medData) {
         console.log(...medData);
-        //addNewMedicine(...medData);
+        addNewMedicine(...medData);
         //TODO send user back to medicine list
     }
 
@@ -45,7 +45,6 @@ export default class MedicineListItem extends React.Component {
                             let formData = [];
                             formData[0] = document.getElementById('medicationName').value;
                             formData[1] = '13pm';
-                            console.log(formData);
                             this.saveNewMedicine(formData);
                     }}>
                         Done
