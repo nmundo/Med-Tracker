@@ -8,7 +8,7 @@ export default class MedicineListItem extends React.Component {
             <li>
                 {this.props.name},
                 {this.props.time},
-                <Link to={'/medicinedetails/' + this.props.id}>Details</Link>
+                <Link to={'/medicinedetails/?id=' + this.props.id}>Details</Link>
             </li>
         );
     }

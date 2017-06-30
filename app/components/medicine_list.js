@@ -41,15 +41,24 @@ export default class MedicineList extends React.Component {
 
     render() {
         let {medicines} = this.state;
-        return (
-            <div className="medicine_list">
-                <Link to='/addMed'> Add medicine </Link>
-                {medicines.map((medicine) =>
-                    <ul key={medicine.id}>
-                        <MedicineListItem name={medicine.name} time={medicine.time} id={medicine.id}/>
-                    </ul>
-                )}
-            </div>
-        );
+        if (typeof(medicines) === "object") {
+            return (
+                <div className="medicine_list">
+                    <Link to='/addMed'> Add medicine </Link>
+                    {medicines.map((medicine) =>
+                        <ul key={medicine.id}>
+                            <MedicineListItem name={medicine.name} time={medicine.time} id={medicine.id}/>
+                        </ul>
+                    )}
+                </div>
+            );
+        } else {
+            return (
+                <div>
+                    Error loading data
+                </div>
+            );
+        }
+        
     }
 }
