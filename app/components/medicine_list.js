@@ -54,12 +54,15 @@ export default class MedicineList extends React.Component {
         if (typeof(medicines) === "object") {
             return (
                 <div className="medicine_list">
-                    <Link to='/addMed'> Add medicine </Link>
-                    {medicines.map((medicine) =>
-                        <ul key={medicine.id}>
-                            <MedicineListItem name={medicine.name} time={medicine.time} id={medicine.id}/>
-                        </ul>
-                    )}
+                    <List>
+                        {medicines.map((medicine) =>
+                            <ListItem
+                                primaryText={medicine.name}
+                                secondaryText={medicine.time}
+                                rightIconButton={<Link to={'/medicinedetails/?id=' + medicine.id}>Details</Link>}
+                            />
+                        )}
+                    </List>
                 </div>
             );
         } else {

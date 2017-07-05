@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import TimePicker from 'material-ui/TimePicker';
+
 import {Link} from 'react-router-dom';
 import {Route} from 'react-router-dom';
-import moment from 'moment';
-import TimePicker from 'rc-time-picker';
 
 import {addNewMedicine} from '../utils/save_user_data';
 
@@ -32,19 +32,12 @@ export default class MedicineListItem extends React.Component {
                     Name<br/>
                     <input type='text' placeholder='Medication Name' id='medicationName'/><br/>
                     Time<br/>
-                    <TimePicker
-                        showSecond={false}
-                        defaultValue={moment().hour(0).minute(0)}
-                        className="xxx"
-                        onChange={this.onChange}
-                        format={'h:mm a'}
-                        use12Hours
-                    /><br/>
+                    <TimePicker id='medTimePicker'/><br/>
                     <button onClick={ (e) => {
                             e.preventDefault();
                             let formData = [];
                             formData[0] = document.getElementById('medicationName').value;
-                            formData[1] = '13pm';
+                            formData[1] = document.getElementById('medTimePicker').value;
                             this.saveNewMedicine(formData);
                     }}>
                         Done
