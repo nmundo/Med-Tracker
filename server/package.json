@@ -9,7 +9,7 @@
     "dev": "nodemon server.js"
   },
   "scripts": {
-      "build": "babel-cli server.js --out-file dist_server.js"
+      "build": "babel server.js --out-file dist_server.js"
   },
   "author": "",
   "license": "MIT",

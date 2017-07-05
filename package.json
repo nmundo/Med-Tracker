@@ -13,14 +13,17 @@
     "axios": "^0.16.2",
     "extract-text-webpack-plugin": "^2.1.2",
     "history": "^4.6.3",
+    "material-ui": "^0.18.6",
     "postcss": "^6.0.3",
     "postcss-cssnext": "^2.11.0",
     "rc-time-picker": "^2.4.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.1",
+    "react-tap-event-plugin": "^2.0.1",
     "react-toolbox": "^2.0.0-beta.12",
-    "style-loader": "^0.18.2"
+    "style-loader": "^0.18.2",
+    "webpack": "^3.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
