@@ -7,3 +7,5 @@ through the application using only your voice.
 
 ##WIP
 [Link](http://www.nathanmundo.com/medtracker)
+
+The live version is not much use yet since I havenn't gotten the data server running off of my local machine yet.
