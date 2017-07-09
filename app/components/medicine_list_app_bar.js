@@ -1,7 +1,8 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
-import FlatButton from 'material-ui/FlatButton';
 import {Link} from 'react-router-dom';
+
+import AddMedicineUI from './add_medicine_ui';
 
 export default class MedicineListAppBar extends React.Component {
     render() {
@@ -10,9 +11,7 @@ export default class MedicineListAppBar extends React.Component {
                 <AppBar
                     title="Medicine List"
                     iconElementRight={
-                        <Link to='/addMed'>
-                            <FlatButton label='Add Medicine' />
-                        </Link>
+                        <AddMedicineUI />
                     }
                 />
             </div>

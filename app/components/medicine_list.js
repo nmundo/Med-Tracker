@@ -54,6 +54,7 @@ export default class MedicineList extends React.Component {
         if (typeof(medicines) === "object") {
             return (
                 <div className="medicine_list">
+                    
                     <List>
                         {medicines.map((medicine) =>
                             <ListItem
